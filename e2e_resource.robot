@@ -32,12 +32,12 @@ logar no sistema
 Ordenar Produtos por Valor
     Select From List By Label    css:.product_sort_container    Price (low to high)
 
-Adicionar Produtos no Carrinho
-    FOR  ${index}  IN  RANGE 1  4
-         ${product_name}=    Get Text    css:produto:nth-child(${index}) .Sauce Labs Onesie
-        Click Element    xpath://*[@id="produto${index}"]/button[.text()='Adicionar ao carrinho']
-        Click Element    css:.botao-voltar
-    END
+# Adicionar Produtos no Carrinho
+#     FOR  ${index}  IN  RANGE 1  3
+#          ${product_name}=    Get Text    (//div[contains(@class,'name ')])[1](${index}) .Sauce Labs Onesie
+#         Click Element    xpath://*[@id="produto${index}"]/add-to-cart-sauce-labs-backpack
+    
+#     END
             
 
 

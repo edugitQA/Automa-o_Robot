@@ -1,283 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-16T00:25:11.725464" rpa="false" schemaversion="5">
-<suite id="s1" name="E2E" source="C:\Users\nothing\Desktop\.vscode\Automações\Robot_Framework\E2E_robot\e2e.robot">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-16T10:50:56.210060" rpa="false" schemaversion="5">
+<suite id="s1" name="E2E" source="C:\Users\nothing\Desktop\.vscode\Automações\Robot_Framework\Automacao_Robot\e2e.robot">
 <test id="s1-t1" name="Test E2E Realizando compra de produto com sucesso" line="7">
 <kw name="abrir o navegador" owner="e2e_resource" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-03-16T00:25:13.874923" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<msg time="2024-03-16T10:50:56.706481" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-03-16T00:25:13.874923" elapsed="3.573496"/>
+<status status="PASS" start="2024-03-16T10:50:56.705479" elapsed="2.261253"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-03-16T00:25:17.449427" elapsed="0.147437"/>
+<status status="PASS" start="2024-03-16T10:50:58.967731" elapsed="0.150248"/>
 </kw>
-<status status="PASS" start="2024-03-16T00:25:13.872883" elapsed="3.723981"/>
+<status status="PASS" start="2024-03-16T10:50:56.704479" elapsed="2.413500"/>
 </kw>
 <kw name="logar no sistema" owner="e2e_resource">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-03-16T00:25:17.599858" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<msg time="2024-03-16T10:50:59.117979" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-03-16T00:25:17.598857" elapsed="0.878062"/>
+<status status="PASS" start="2024-03-16T10:50:59.117979" elapsed="0.716607"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-16T00:25:18.478916" level="INFO">Typing text 'standard_user' into text field '//input[contains(@placeholder,'Username')]'.</msg>
+<msg time="2024-03-16T10:50:59.835586" level="INFO">Typing text 'standard_user' into text field '//input[contains(@placeholder,'Username')]'.</msg>
 <arg>locator=${CAMPO_NAME}</arg>
 <arg>text=${NAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-16T00:25:18.476919" elapsed="0.286473"/>
+<status status="PASS" start="2024-03-16T10:50:59.834586" elapsed="0.280570"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-03-16T00:25:18.764415" level="INFO">Typing password into text field '//input[contains(@placeholder,'Password')]'.</msg>
-<msg time="2024-03-16T00:25:18.822006" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-03-16T10:51:00.116163" level="INFO">Typing password into text field '//input[contains(@placeholder,'Password')]'.</msg>
+<msg time="2024-03-16T10:51:00.178047" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>locator=${CAMPO_PASSWORD}</arg>
 <arg>password=${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-16T00:25:18.763392" elapsed="0.135921"/>
+<status status="PASS" start="2024-03-16T10:51:00.115156" elapsed="0.218948"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-16T00:25:18.900309" level="INFO">Clicking element '//input[contains(@id,'login-button')]'.</msg>
+<msg time="2024-03-16T10:51:00.335219" level="INFO">Clicking element '//input[contains(@id,'login-button')]'.</msg>
 <arg>locator=${BOTÃO_LOGAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-16T00:25:18.900309" elapsed="0.148572"/>
+<status status="PASS" start="2024-03-16T10:51:00.334664" elapsed="0.175372"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${TITLE}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-03-16T00:25:19.048881" elapsed="0.020178"/>
+<status status="PASS" start="2024-03-16T10:51:00.510605" elapsed="0.027334"/>
 </kw>
-<status status="PASS" start="2024-03-16T00:25:17.598857" elapsed="1.470879"/>
+<status status="PASS" start="2024-03-16T10:50:59.117979" elapsed="1.419960"/>
 </kw>
 <kw name="Ordenar Produtos por Valor" owner="e2e_resource">
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-03-16T00:25:19.070948" level="INFO">Selecting options from selection list 'css:.product_sort_container' by label Price (low to high).</msg>
+<msg time="2024-03-16T10:51:00.537939" level="INFO">Selecting options from selection list 'css:.product_sort_container' by label Price (low to high).</msg>
 <arg>css:.product_sort_container</arg>
 <arg>Price (low to high)</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-03-16T00:25:19.070948" elapsed="0.187905"/>
+<status status="PASS" start="2024-03-16T10:51:00.537939" elapsed="0.175174"/>
 </kw>
-<status status="PASS" start="2024-03-16T00:25:19.070246" elapsed="0.188607"/>
-</kw>
-<kw name=" Adicionar Produtos no Carrinho" owner="e2e_resource">
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-16T00:25:19.617657" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-03-16T00:25:19.617657" level="FAIL">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=122.0.6261.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF78908AD32+56930]
-	(No symbol) [0x00007FF788FFF632]
-	(No symbol) [0x00007FF788EB42E5]
-	(No symbol) [0x00007FF788EB9261]
-	(No symbol) [0x00007FF788EBB6EB]
-	(No symbol) [0x00007FF788EBB7B0]
-	(No symbol) [0x00007FF788EF955C]
-	(No symbol) [0x00007FF788EF9A2C]
-	(No symbol) [0x00007FF788F3A997]
-	(No symbol) [0x00007FF788F1BCDF]
-	(No symbol) [0x00007FF788F381E2]
-	(No symbol) [0x00007FF788F1BA43]
-	(No symbol) [0x00007FF788EED438]
-	(No symbol) [0x00007FF788EEE4D1]
-	GetHandleVerifier [0x00007FF789406ABD+3709933]
-	GetHandleVerifier [0x00007FF78945FFFD+4075821]
-	GetHandleVerifier [0x00007FF78945818F+4043455]
-	GetHandleVerifier [0x00007FF789129766+706710]
-	(No symbol) [0x00007FF78900B90F]
-	(No symbol) [0x00007FF789006AF4]
-	(No symbol) [0x00007FF789006C4C]
-	(No symbol) [0x00007FF788FF6904]
-	BaseThreadInitThunk [0x00007FFA6890257D+29]
-	RtlUserThreadStart [0x00007FFA694AAA58+40]
-</msg>
-<var>${product_name}</var>
-<arg>css=:nth-child(${product}) &gt; .inventory_item_description</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-03-16T00:25:19.260653" elapsed="0.369194">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=122.0.6261.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF78908AD32+56930]
-	(No symbol) [0x00007FF788FFF632]
-	(No symbol) [0x00007FF788EB42E5]
-	(No symbol) [0x00007FF788EB9261]
-	(No symbol) [0x00007FF788EBB6EB]
-	(No symbol) [0x00007FF788EBB7B0]
-	(No symbol) [0x00007FF788EF955C]
-	(No symbol) [0x00007FF788EF9A2C]
-	(No symbol) [0x00007FF788F3A997]
-	(No symbol) [0x00007FF788F1BCDF]
-	(No symbol) [0x00007FF788F381E2]
-	(No symbol) [0x00007FF788F1BA43]
-	(No symbol) [0x00007FF788EED438]
-	(No symbol) [0x00007FF788EEE4D1]
-	GetHandleVerifier [0x00007FF789406ABD+3709933]
-	GetHandleVerifier [0x00007FF78945FFFD+4075821]
-	GetHandleVerifier [0x00007FF78945818F+4043455]
-	GetHandleVerifier [0x00007FF789129766+706710]
-	(No symbol) [0x00007FF78900B90F]
-	(No symbol) [0x00007FF789006AF4]
-	(No symbol) [0x00007FF789006C4C]
-	(No symbol) [0x00007FF788FF6904]
-	BaseThreadInitThunk [0x00007FFA6890257D+29]
-	RtlUserThreadStart [0x00007FFA694AAA58+40]
-</status>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>xpath://div[text()='${product_name}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-16T00:25:19.629847" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>css=.btn_primary</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-16T00:25:19.629847" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>css=[data-test="back-to-products"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-03-16T00:25:19.630845" elapsed="0.000133"/>
-</kw>
-<var name="${product}">RANGE 1</var>
-<status status="FAIL" start="2024-03-16T00:25:19.260509" elapsed="0.370535">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=122.0.6261.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF78908AD32+56930]
-	(No symbol) [0x00007FF788FFF632]
-	(No symbol) [0x00007FF788EB42E5]
-	(No symbol) [0x00007FF788EB9261]
-	(No symbol) [0x00007FF788EBB6EB]
-	(No symbol) [0x00007FF788EBB7B0]
-	(No symbol) [0x00007FF788EF955C]
-	(No symbol) [0x00007FF788EF9A2C]
-	(No symbol) [0x00007FF788F3A997]
-	(No symbol) [0x00007FF788F1BCDF]
-	(No symbol) [0x00007FF788F381E2]
-	(No symbol) [0x00007FF788F1BA43]
-	(No symbol) [0x00007FF788EED438]
-	(No symbol) [0x00007FF788EEE4D1]
-	GetHandleVerifier [0x00007FF789406ABD+3709933]
-	GetHandleVerifier [0x00007FF78945FFFD+4075821]
-	GetHandleVerifier [0x00007FF78945818F+4043455]
-	GetHandleVerifier [0x00007FF789129766+706710]
-	(No symbol) [0x00007FF78900B90F]
-	(No symbol) [0x00007FF789006AF4]
-	(No symbol) [0x00007FF789006C4C]
-	(No symbol) [0x00007FF788FF6904]
-	BaseThreadInitThunk [0x00007FFA6890257D+29]
-	RtlUserThreadStart [0x00007FFA694AAA58+40]
-</status>
-</iter>
-<var>${product}</var>
-<value>RANGE 1</value>
-<value>3</value>
-<status status="FAIL" start="2024-03-16T00:25:19.259964" elapsed="0.371080">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=122.0.6261.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF78908AD32+56930]
-	(No symbol) [0x00007FF788FFF632]
-	(No symbol) [0x00007FF788EB42E5]
-	(No symbol) [0x00007FF788EB9261]
-	(No symbol) [0x00007FF788EBB6EB]
-	(No symbol) [0x00007FF788EBB7B0]
-	(No symbol) [0x00007FF788EF955C]
-	(No symbol) [0x00007FF788EF9A2C]
-	(No symbol) [0x00007FF788F3A997]
-	(No symbol) [0x00007FF788F1BCDF]
-	(No symbol) [0x00007FF788F381E2]
-	(No symbol) [0x00007FF788F1BA43]
-	(No symbol) [0x00007FF788EED438]
-	(No symbol) [0x00007FF788EEE4D1]
-	GetHandleVerifier [0x00007FF789406ABD+3709933]
-	GetHandleVerifier [0x00007FF78945FFFD+4075821]
-	GetHandleVerifier [0x00007FF78945818F+4043455]
-	GetHandleVerifier [0x00007FF789129766+706710]
-	(No symbol) [0x00007FF78900B90F]
-	(No symbol) [0x00007FF789006AF4]
-	(No symbol) [0x00007FF789006C4C]
-	(No symbol) [0x00007FF788FF6904]
-	BaseThreadInitThunk [0x00007FFA6890257D+29]
-	RtlUserThreadStart [0x00007FFA694AAA58+40]
-</status>
-</for>
-<status status="FAIL" start="2024-03-16T00:25:19.259416" elapsed="0.371628">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=122.0.6261.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF78908AD32+56930]
-	(No symbol) [0x00007FF788FFF632]
-	(No symbol) [0x00007FF788EB42E5]
-	(No symbol) [0x00007FF788EB9261]
-	(No symbol) [0x00007FF788EBB6EB]
-	(No symbol) [0x00007FF788EBB7B0]
-	(No symbol) [0x00007FF788EF955C]
-	(No symbol) [0x00007FF788EF9A2C]
-	(No symbol) [0x00007FF788F3A997]
-	(No symbol) [0x00007FF788F1BCDF]
-	(No symbol) [0x00007FF788F381E2]
-	(No symbol) [0x00007FF788F1BA43]
-	(No symbol) [0x00007FF788EED438]
-	(No symbol) [0x00007FF788EEE4D1]
-	GetHandleVerifier [0x00007FF789406ABD+3709933]
-	GetHandleVerifier [0x00007FF78945FFFD+4075821]
-	GetHandleVerifier [0x00007FF78945818F+4043455]
-	GetHandleVerifier [0x00007FF789129766+706710]
-	(No symbol) [0x00007FF78900B90F]
-	(No symbol) [0x00007FF789006AF4]
-	(No symbol) [0x00007FF789006C4C]
-	(No symbol) [0x00007FF788FF6904]
-	BaseThreadInitThunk [0x00007FFA6890257D+29]
-	RtlUserThreadStart [0x00007FFA694AAA58+40]
-</status>
+<status status="PASS" start="2024-03-16T10:51:00.537939" elapsed="0.175174"/>
 </kw>
 <kw name="fechar o navegador" owner="e2e_resource" type="TEARDOWN">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-03-16T00:25:19.889375" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-16T10:51:01.005950" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-03-16T00:25:19.632351" elapsed="0.258020"/>
+<status status="PASS" start="2024-03-16T10:51:00.715108" elapsed="0.291841"/>
 </kw>
-<status status="PASS" start="2024-03-16T00:25:19.632351" elapsed="0.258020"/>
+<status status="PASS" start="2024-03-16T10:51:00.714109" elapsed="0.292840"/>
 </kw>
-<status status="FAIL" start="2024-03-16T00:25:13.871878" elapsed="6.018493">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=122.0.6261.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF78908AD32+56930]
-	(No symbol) [0x00007FF788FFF632]
-	(No symbol) [0x00007FF788EB42E5]
-	(No symbol) [0x00007FF788EB9261]
-	(No symbol) [0x00007FF788EBB6EB]
-	(No symbol) [0x00007FF788EBB7B0]
-	(No symbol) [0x00007FF788EF955C]
-	(No symbol) [0x00007FF788EF9A2C]
-	(No symbol) [0x00007FF788F3A997]
-	(No symbol) [0x00007FF788F1BCDF]
-	(No symbol) [0x00007FF788F381E2]
-	(No symbol) [0x00007FF788F1BA43]
-	(No symbol) [0x00007FF788EED438]
-	(No symbol) [0x00007FF788EEE4D1]
-	GetHandleVerifier [0x00007FF789406ABD+3709933]
-	GetHandleVerifier [0x00007FF78945FFFD+4075821]
-	GetHandleVerifier [0x00007FF78945818F+4043455]
-	GetHandleVerifier [0x00007FF789129766+706710]
-	(No symbol) [0x00007FF78900B90F]
-	(No symbol) [0x00007FF789006AF4]
-	(No symbol) [0x00007FF789006C4C]
-	(No symbol) [0x00007FF788FF6904]
-	BaseThreadInitThunk [0x00007FFA6890257D+29]
-	RtlUserThreadStart [0x00007FFA694AAA58+40]
-</status>
+<status status="PASS" start="2024-03-16T10:50:56.703484" elapsed="4.306026"/>
 </test>
-<status status="FAIL" start="2024-03-16T00:25:11.728471" elapsed="8.168598"/>
+<status status="PASS" start="2024-03-16T10:50:56.213095" elapsed="4.798442"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="E2E">E2E</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="E2E">E2E</stat>
 </suite>
 </statistics>
 <errors>
