@@ -1,4 +1,4 @@
-# Automa-o_Robot
+# Automação_Robot
 Automação E2E utiizando robot framework
 
 # E2E - Efetuando a compra de produtos com sucesso
