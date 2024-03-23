@@ -1,4 +1,5 @@
 ***settings***
+Documentation       Aqui ficará todas ações
 Library             SeleniumLibrary
 Library             String
 
@@ -12,9 +13,7 @@ ${CAMPO_NAME}             //input[contains(@placeholder,'Username')]
 ${CAMPO_PASSWORD}         //input[contains(@placeholder,'Password')]
 ${BOTÃO_LOGAR}            //input[contains(@id,'login-button')]
 ${TITLE}                  Products
-${BOTAO_ADD}                //button[contains(@data-test,'add-to-cart-sauce-labs-backpack')]
-
-
+${BOTAO_ADD}              //button[contains(@data-test,'add-to-cart-sauce-labs-backpack')]
 
 
 *** Keywords ***
@@ -55,11 +54,11 @@ Checar Quantidade de Produtos no Carrinho
     Sleep    300ms 
 
 Realizar Checkout
-    Click Element    css=[data-test="checkout"]
-    Input Text    css=[data-test="firstName"]    Teste first Name
-    Input Text    css=[data-test="lastName"]    Teste last Name
-    Input Text    css=[data-test="postalCode"]    73357552
-    Click Element    css=[data-test="continue"]
+    Click Element     css=[data-test="checkout"]
+    Input Text        css=[data-test="firstName"]       Teste first Name
+    Input Text        css=[data-test="lastName"]        Teste last Name
+    Input Text        css=[data-test="postalCode"]      73357552
+    Click Element     css=[data-test="continue"]
     Sleep    500ms 
 
 Validar Produtos no Checkout

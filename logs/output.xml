@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-22T16:57:40.009528" rpa="false" schemaversion="5">
+<suite id="s1" name="E2E" source="C:\Users\nothing\Desktop\.vscode\Automações\Robot_Framework\Automacao_Robot\e2e.robot">
+<test id="s1-t1" name="Test E2E Realizando compra de produto com sucesso" line="7">
+<kw name="abrir o navegador" owner="e2e_resource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:40.409567" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-22T16:57:40.409567" elapsed="4.507175"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-22T16:57:44.917737" elapsed="0.149599"/>
+</kw>
+<status status="PASS" start="2024-03-22T16:57:40.407566" elapsed="4.659770"/>
+</kw>
+<kw name="logar no sistema" owner="e2e_resource">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:45.072345" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-22T16:57:45.071343" elapsed="1.053792"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:46.126134" level="INFO">Typing text 'standard_user' into text field '//input[contains(@placeholder,'Username')]'.</msg>
+<arg>locator=${CAMPO_NAME}</arg>
+<arg>text=${NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:46.125135" elapsed="0.256420"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:46.882313" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:46.382073" elapsed="0.500240"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:46.883326" level="INFO">Typing password into text field '//input[contains(@placeholder,'Password')]'.</msg>
+<msg time="2024-03-22T16:57:46.936346" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>locator=${CAMPO_PASSWORD}</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:46.882313" elapsed="0.160582"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:47.544212" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:47.043892" elapsed="0.500320"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:47.544212" level="INFO">Clicking element '//input[contains(@id,'login-button')]'.</msg>
+<arg>locator=${BOTÃO_LOGAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:47.544212" elapsed="0.161175"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:48.206480" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:47.705387" elapsed="0.501093"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${TITLE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-22T16:57:48.206480" elapsed="0.019015"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:48.725716" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:48.225495" elapsed="0.500221"/>
+</kw>
+<status status="PASS" start="2024-03-22T16:57:45.071343" elapsed="3.654373"/>
+</kw>
+<kw name="Ordenar Produtos por Valor" owner="e2e_resource">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:48.727254" level="INFO">Selecting options from selection list 'css:.product_sort_container' by label Price (low to high).</msg>
+<arg>css:.product_sort_container</arg>
+<arg>Price (low to high)</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-03-22T16:57:48.727254" elapsed="0.141938"/>
+</kw>
+<status status="PASS" start="2024-03-22T16:57:48.726231" elapsed="0.142961"/>
+</kw>
+<kw name="Adicionar Produtos no Carrinho" owner="e2e_resource">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:48.905194" level="INFO">${product_name} = Sauce Labs Onesie</msg>
+<var>${product_name}</var>
+<arg>xpath=(//div[contains(@class,'name ')])[${index}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:48.871200" elapsed="0.033994"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:48.906197" level="INFO">Clicking element 'xpath=(//div[contains(@class,'inventory_item_name')])[1]//following::button[contains(@data-test,'add-to-cart')]'.</msg>
+<arg>xpath=(//div[contains(@class,'inventory_item_name')])[${index}]//following::button[contains(@data-test,'add-to-cart')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:48.905194" elapsed="0.065556"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:49.470924" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:48.970750" elapsed="0.500174"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-03-22T16:57:48.871200" elapsed="0.599724"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:49.500462" level="INFO">${product_name} = Sauce Labs Bike Light</msg>
+<var>${product_name}</var>
+<arg>xpath=(//div[contains(@class,'name ')])[${index}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:49.471438" elapsed="0.029024"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:49.501457" level="INFO">Clicking element 'xpath=(//div[contains(@class,'inventory_item_name')])[2]//following::button[contains(@data-test,'add-to-cart')]'.</msg>
+<arg>xpath=(//div[contains(@class,'inventory_item_name')])[${index}]//following::button[contains(@data-test,'add-to-cart')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:49.501457" elapsed="0.056539"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:50.058479" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:49.557996" elapsed="0.500483"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2024-03-22T16:57:49.471438" elapsed="0.587041"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:50.087572" level="INFO">${product_name} = Sauce Labs Bolt T-Shirt</msg>
+<var>${product_name}</var>
+<arg>xpath=(//div[contains(@class,'name ')])[${index}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:50.059558" elapsed="0.028014"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:50.087572" level="INFO">Clicking element 'xpath=(//div[contains(@class,'inventory_item_name')])[3]//following::button[contains(@data-test,'add-to-cart')]'.</msg>
+<arg>xpath=(//div[contains(@class,'inventory_item_name')])[${index}]//following::button[contains(@data-test,'add-to-cart')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:50.087572" elapsed="0.062009"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:50.649664" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:50.149581" elapsed="0.500083"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2024-03-22T16:57:50.058479" elapsed="0.591185"/>
+</iter>
+<var>${index}</var>
+<value>1</value>
+<value>4</value>
+<status status="PASS" start="2024-03-22T16:57:48.870194" elapsed="1.779470"/>
+</for>
+<status status="PASS" start="2024-03-22T16:57:48.870194" elapsed="1.779470"/>
+</kw>
+<kw name="Checar Quantidade de Produtos no Carrinho" owner="e2e_resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:50.651673" level="INFO">Clicking element 'css=.shopping_cart_link'.</msg>
+<arg>css=.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:50.650677" elapsed="0.068540"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:50.748236" level="INFO">Element 'css=.cart_list &gt; :nth-child(3)' contains text 'Sauce Labs Onesie'.</msg>
+<arg>css=.cart_list &gt; :nth-child(3)</arg>
+<arg>Sauce Labs Onesie</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-22T16:57:50.719217" elapsed="0.029019"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:51.048249" level="INFO">Slept 300 milliseconds.</msg>
+<arg>300ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:50.748236" elapsed="0.300013"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:51.072787" level="INFO">Element 'css=.cart_list &gt; :nth-child(4)' contains text 'Sauce Labs Bike Light'.</msg>
+<arg>css=.cart_list &gt; :nth-child(4)</arg>
+<arg>Sauce Labs Bike Light</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-22T16:57:51.048249" elapsed="0.024538"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:51.373856" level="INFO">Slept 300 milliseconds.</msg>
+<arg>300ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:51.072787" elapsed="0.301069"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:51.396481" level="INFO">Element 'css=.cart_list &gt; :nth-child(5)' contains text 'Sauce Labs Bolt T-Shirt'.</msg>
+<arg>css=.cart_list &gt; :nth-child(5)</arg>
+<arg>Sauce Labs Bolt T-Shirt</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-22T16:57:51.373856" elapsed="0.022625"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:51.697662" level="INFO">Slept 300 milliseconds.</msg>
+<arg>300ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:51.397478" elapsed="0.300184"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:51.697662" level="INFO">Verifying element 'css=.shopping_cart_badge' contains exact text '3'.</msg>
+<arg>css=.shopping_cart_badge</arg>
+<arg>3</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-03-22T16:57:51.697662" elapsed="0.022013"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:52.019857" level="INFO">Slept 300 milliseconds.</msg>
+<arg>300ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:51.719675" elapsed="0.300182"/>
+</kw>
+<status status="PASS" start="2024-03-22T16:57:50.650677" elapsed="1.369180"/>
+</kw>
+<kw name="Realizar Checkout" owner="e2e_resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:52.020879" level="INFO">Clicking element 'css=[data-test="checkout"]'.</msg>
+<arg>css=[data-test="checkout"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:52.020879" elapsed="0.069331"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:52.092203" level="INFO">Typing text 'Teste first Name' into text field 'css=[data-test="firstName"]'.</msg>
+<arg>css=[data-test="firstName"]</arg>
+<arg>Teste first Name</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:52.090210" elapsed="0.176270"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:52.266480" level="INFO">Typing text 'Teste last Name' into text field 'css=[data-test="lastName"]'.</msg>
+<arg>css=[data-test="lastName"]</arg>
+<arg>Teste last Name</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:52.266480" elapsed="0.160088"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:52.427567" level="INFO">Typing text '73357552' into text field 'css=[data-test="postalCode"]'.</msg>
+<arg>css=[data-test="postalCode"]</arg>
+<arg>73357552</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:52.427567" elapsed="0.130026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:52.558587" level="INFO">Clicking element 'css=[data-test="continue"]'.</msg>
+<arg>css=[data-test="continue"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:52.558587" elapsed="0.079003"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:53.139075" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:52.637590" elapsed="0.501485"/>
+</kw>
+<status status="PASS" start="2024-03-22T16:57:52.020879" elapsed="1.118196"/>
+</kw>
+<kw name="Validar Produtos no Checkout" owner="e2e_resource">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:53.163743" level="INFO">Element 'css=.cart_list &gt; :nth-child(3)' contains text 'Sauce Labs Onesie'.</msg>
+<arg>css=.cart_list &gt; :nth-child(3)</arg>
+<arg>Sauce Labs Onesie</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-22T16:57:53.140088" elapsed="0.023655"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:53.190473" level="INFO">Element 'css=.cart_list &gt; :nth-child(4)' contains text 'Sauce Labs Bike Light'.</msg>
+<arg>css=.cart_list &gt; :nth-child(4)</arg>
+<arg>Sauce Labs Bike Light</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-22T16:57:53.163743" elapsed="0.026730"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:53.213896" level="INFO">Element 'css=.cart_list &gt; :nth-child(5)' contains text 'Sauce Labs Bolt T-Shirt'.</msg>
+<arg>css=.cart_list &gt; :nth-child(5)</arg>
+<arg>Sauce Labs Bolt T-Shirt</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-03-22T16:57:53.191025" elapsed="0.022871"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:53.714515" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:53.213896" elapsed="0.500619"/>
+</kw>
+<status status="PASS" start="2024-03-22T16:57:53.140088" elapsed="0.574427"/>
+</kw>
+<kw name="Validar valor total" owner="e2e_resource">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:53.717023" level="INFO">Verifying element 'css=.summary_total_label' contains exact text 'Total: $36.69'.</msg>
+<arg>css=.summary_total_label</arg>
+<arg>Total: $36.69</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-03-22T16:57:53.716004" elapsed="0.022844"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-22T16:57:54.239360" level="INFO">Slept 500 milliseconds.</msg>
+<arg>500ms</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-22T16:57:53.738848" elapsed="0.500512"/>
+</kw>
+<status status="PASS" start="2024-03-22T16:57:53.716004" elapsed="0.523356"/>
+</kw>
+<kw name=" Finalizando processo de compra" owner="e2e_resource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:54.241371" level="INFO">Clicking element '//button[@id='finish']'.</msg>
+<arg>//button[@id='finish']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-22T16:57:54.240373" elapsed="0.076556"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=Thank you for your order!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-22T16:57:54.316929" elapsed="0.018996"/>
+</kw>
+<status status="PASS" start="2024-03-22T16:57:54.240373" elapsed="0.096563"/>
+</kw>
+<kw name="fechar o navegador" owner="e2e_resource" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-03-22T16:57:54.517562" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-03-22T16:57:54.337923" elapsed="0.179639"/>
+</kw>
+<status status="PASS" start="2024-03-22T16:57:54.337923" elapsed="0.179639"/>
+</kw>
+<status status="PASS" start="2024-03-22T16:57:40.406557" elapsed="14.111999"/>
+</test>
+<status status="PASS" start="2024-03-22T16:57:40.013770" elapsed="14.506791"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="E2E">E2E</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

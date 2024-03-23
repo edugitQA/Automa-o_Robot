@@ -13,5 +13,3 @@ Test E2E Realizando compra de produto com sucesso
     Validar Produtos no Checkout
     Validar valor total
     Finalizando processo de compra
-    
-    
