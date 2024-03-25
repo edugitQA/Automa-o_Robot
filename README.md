@@ -18,7 +18,7 @@
 
 ## Pré-requisitos
 
-- Python 3.x
+- Python versão mais recente
 - pip (gerenciador de pacotes do Python)
 - Git (opcional, para clonar o repositório)
 
